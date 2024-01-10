@@ -10,17 +10,17 @@
     
 </body>
 <script>
-    const div = document.createElement('div')
+    let div = document.createElement('div');
     console.log(div);
-    div.className = "main"
-    div.id = Math.round(Math.random() * 10 + 1)
-    div.setAttribute("title", "generated title")
-    div.style.backgroundColor = "green"
-    div.style.padding = "12px"
-    // div.innerText = "Chai aur code"
-    const addText = document.createTextNode("Chai aur code")
-    div.appendChild(addText)
 
+    div.className = 'div-class';
+    div.id = 'div-id'
+    div.style.color = 'orange'
+    div.innerText = 'vikas';
+    
+    const child = document.createTextNode(' Jai Shree Krishna 💖✌️');
+
+    div.appendChild(child)
     document.body.appendChild(div)
 </script>
 </html>
