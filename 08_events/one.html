@@ -18,46 +18,83 @@
         </ul>
    </div>
 </body>
-<script>
-    // document.getElementById('owl').onclick = function(){
-    //     alert("owl clicked")
-    // }
+    <script>
+        /*
+        document.getElementById('owl').addEventListener('click' , function(){
+            alert('owl clicked');
+        }, false)
 
-     // attachEvent()
-    // jQuery - on
+        To Study in Events
+        type, timseStamp, DefaultPrevented
+        Target, toElement, srcElement, currentTarget
+        clentX, clientY, screenX, screenY
+        altkey, cntrlkey, shiftkey, keyCode 
+        */
 
-    // type, timestamp, defaultPrevented
-    // target, toElement, srcElement, currentTarget,
-    // clientX, clientY, screenX, screenY
-    // altkey, ctrlkey, shiftkey, keyCode
 
-    // document.getElementById('images').addEventListener('click', function(e){
-    //     console.log("clicked inside the ul");
-    // }, false)
 
-    // document.getElementById('owl').addEventListener('click', function(e){
-    //     console.log("owl clicked");
-    //     e.stopPropagation()
-    // }, false)
-    
-    // document.getElementById('google').addEventListener('click',function(e){
-    //     e.preventDefault();
-    //     e.stopPropagation()
-    //     console.log("google clicked");
-    // }, false)
-   
-    
-    document.querySelector('#images').addEventListener('click', function(e){
-        console.log(e.target.tagName);
-        if (e.target.tagName === 'IMG') {
-            console.log(e.target.id);
-            let removeIt = e.target.parentNode
-            removeIt.remove()
-        }
-    
+
+
+
+
+        /*
+        Event Propagation
+        document.getElementById('images').addEventListener('click' , function(){
+            console.log('image clicked');
+        }, false)
+        document.getElementById('owl').addEventListener('click' , function(){
+            console.log('owl clicked');
+        }, false)
+        Here Buubling is followed from innermost to uppermost. because it's default behaviour
+
+        If we write true capturing method is going to be folowed. from outermost to innermost 
+        exp
+        document.getElementById('images').addEventListener('click' , function(e){
+            console.log('image clicked');
+        }, true)
+        document.getElementById('owl').addEventListener('click' , function(){
+            console.log('owl clicked');
+        }, true)
+
+        //stopPropagation Method. If we add stopProgation in code it will stop Bubbling.
+        document.getElementById('images').addEventListener('click' , function(e){
+            console.log('image clicked');
+        }, false)
+        document.getElementById('owl').addEventListener('click' , function(e){
+            console.log('owl clicked');
+            e.stopPropagation()
+        }, false)
+        */
+
+
+
         
-    })
-    
-    //removeIt.parentNode.removeChild(removeIt)
-</script>
+
+
+
+        /*
+        PreventDefault Method. It will stop default behaviour of tags. Here we are stopping default behaviour of anchor tag.
+        document.getElementById('google').addEventListener('click' , (e)=>{
+            e.preventDefault();
+            console.log('googlke is blocked');
+        }) 
+        */
+
+
+
+
+
+
+
+        /* Removing the clicked Element
+        document.getElementById('images').addEventListener('click' , (e)=>{
+            console.log(e.target.tagName);
+            if (e.target.tagName === 'IMG') {
+                let del = e.target.parentNode;
+                del.remove()
+            }
+        })
+        */
+
+    </script>
 </html>
