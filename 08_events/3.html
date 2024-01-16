@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Vikas Pal Set-Interval Practice</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+
+        /*
+        const date = ()=>{
+            // console.log(Date.now());
+        }
+        setInterval(date,3000)
+        */
+
+        /*
+        // Clear Interval
+        const date = ()=>{
+            console.log(Date.now());
+        }
+        const intervalId =  setInterval(date,3000);
+        clearInterval(intervalId)
+        */
+        
+
+        const date = ()=>{
+            console.log(Date.now());
+        }
+        const start =  document.getElementById('start')
+        start.addEventListener('click' , ()=>{
+            setInterval(date , 2000)
+        })
+
+
+
+    </script>
+</body>
+</html>

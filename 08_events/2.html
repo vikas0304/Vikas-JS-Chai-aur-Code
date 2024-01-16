@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeout - Practice</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+
+    <script>
+        /*
+        It Performs function only one time
+        setTimeout(function(){
+            console.log('vikas');
+        },2000)
+        */
+
+
+
+        /*
+        Using reference of function.
+        const vikas = function(){
+            console.log('vikas');
+        }
+        setTimeout(vikas , 2000);
+        */
+
+        /*
+        Name Changing after sometime
+        function nameChange(){
+            document.querySelector('h1').innerHTML = 'Vikas Pal ✌️💖'
+        }
+        setTimeout(nameChange , 2000)
+        */
+
+        /*
+        // Clear Timeout Method.
+        function nameChange(){
+            document.querySelector('h1').innerHTML = 'Vikas Pal ✌️💖'
+        }
+        const tiemOut = setTimeout(nameChange , 2000)
+        document.getElementById('stop').addEventListener('click' , ()=>{
+            clearTimeout(tiemOut);
+            console.log('Stopped TimeOut');
+        })
+        */
+
+
+    </script>
+</body>
+</html>
