@@ -5,26 +5,25 @@ function multipleBy5(num){
 
 multipleBy5.power = 2
 
-console.log(multipleBy5(5));
-console.log(multipleBy5.power);
-console.log(multipleBy5.prototype);
+// console.log(multipleBy5(5));
+// console.log(multipleBy5.power);
+// console.log(multipleBy5.prototype);
 
-function createUser(username, score){
-    this.username = username
-    this.score = score
+class createUser {
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+    printMe() {
+        console.log(`this is for ${this.price}rs`);
+    }
 }
 
-createUser.prototype.increment = function(){
-    this.score++
-}
-createUser.prototype.printMe = function(){
-    console.log(`price is ${this.score}`);
-}
 
-const chai = new createUser("chai", 25)
-const tea = createUser("tea", 250)
+const Tea = new createUser('booba' , '2250');
+console.log(Tea);
 
-chai.printMe()
+Tea.printMe()
 
 
 /*
