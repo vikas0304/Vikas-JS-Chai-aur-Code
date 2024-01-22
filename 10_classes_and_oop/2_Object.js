@@ -9,16 +9,14 @@ multipleBy5.power = 2
 // console.log(multipleBy5.power);
 // console.log(multipleBy5.prototype);
 
-class createUser {
-    constructor(name, price) {
-        this.name = name;
-        this.price = price;
-    }
-    printMe() {
-        console.log(`this is for ${this.price}rs`);
-    }
-}
+const createUser = function(name , price){
+    this.name = name;
+    this.price = price
+};
 
+createUser.prototype.printMe = ()=>{
+    console.log(`this is for ${this.price}rs`);
+};
 
 const Tea = new createUser('booba' , '2250');
 console.log(Tea);
